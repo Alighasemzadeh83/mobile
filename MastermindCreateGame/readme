@@ -1,29 +1,37 @@
-Mastermind Terminal Game in Swift
+# Mastermind Terminal Game in Swift
+
 This is a command-line implementation of the classic Mastermind game written in Swift.
 
-Overview
+## Overview
+
 Mastermind is a code-breaking game where the player tries to guess a secret 4-digit code. Each digit ranges from 1 to 6. After each guess, the program provides feedback in the form of:
 
-B (Black Peg): Number of digits guessed correctly in both value and position.
+- **B (Black Peg):** Number of digits guessed correctly in both value and position.
+- **W (White Peg):** Number of digits guessed correctly in value but in the wrong position.
 
-W (White Peg): Number of digits guessed correctly in value but in the wrong position.
+### Example:
 
-Example:
-Secret code: 1234
+- Secret code: `1234`  
+- Guess: `1235` → Output: `BBB` (3 black pegs)  
+- Guess: `4321` → Output: `WWWW` (4 white pegs)
 
-Guess: 1235 → Output: BBB (3 black pegs)
+## Features
 
-Guess: 4321 → Output: WWWW (4 white pegs)
+- Written entirely in Swift and runs in the terminal.
+- Validates user input and handles errors gracefully.
+- Allows the player to exit the game anytime by typing `exit`.
+- Provides clear and simple user prompts and feedback.
 
-Features
-Written entirely in Swift and runs in the terminal.
+## Setup and Running
 
-Validates user input and handles errors gracefully.
+To set up the Swift package and run the game, follow these steps in your terminal:
 
-Allows the player to exit the game anytime by typing exit.
+```bash
+# Initialize a new Swift executable package
+swift package init --type executable
 
-Provides clear and simple user prompts and feedback.
+# Build the project
+swift build
 
-How to Run : 
-run the command "swift package init --type executable" for making executable files needed for running this project 
-and then run the Swift program in your terminal and follow the on-screen instructions to guess the secret code.
+# Run the executable
+swift run
