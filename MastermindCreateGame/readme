@@ -1,0 +1,2 @@
+run the command "swift package init --type executable" 
+for making executable files needed for running this project
